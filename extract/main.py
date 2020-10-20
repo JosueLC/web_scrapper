@@ -30,7 +30,7 @@ def _news_scraper(news_site_uid):
 
 def _save_articles(news_site_uid, articles):
     now = datetime.datetime.now().strftime('%Y_%m_%d')
-    out_file_name = '../web_scrapper_results/{news_site_uid}_{datetime}_articles.csv'.format(
+    out_file_name = '{news_site_uid}_{datetime}_articles.csv'.format(
         news_site_uid = news_site_uid,
         datetime = now)
     csv_headers = list(filter(lambda property: not property.startswith('_'), dir(articles[0])))
